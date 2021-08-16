@@ -15,9 +15,9 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
-  /* margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
-  display: block; */
+  display: block;
 }
 
 .card-item {
@@ -40,4 +40,10 @@ body {
 .card-item__list {
   list-style: none;
   color: #382d6d;
+}
+
+.country-card {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
