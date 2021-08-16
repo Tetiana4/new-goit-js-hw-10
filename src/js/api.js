@@ -11,14 +11,13 @@ const list = 'fields=name;capital;population;flag;languages';
 
 refs.inputSearch.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
-function onSearch() {
+async function onSearch() {
     if (this.value === '') {
         return Notiflix.Notify.failure('Please enter country');
     };
-    fetch(`${url}${this.value}?${list}`)
-        .then(response => {
-            return response.json()
-        })
+    const response = await fetch(`${url}${this.value}?${list}`)
+        return response.json()
+        
         .then(country => {
             refs.countryList.innerHTML = '';
             if (country.status === 404) {
